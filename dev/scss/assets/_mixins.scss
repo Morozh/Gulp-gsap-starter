@@ -1,0 +1,22 @@
+@mixin font-fix {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-smoothing: antialiased;
+}
+
+/* Px to rem
+ * TODO: Px to em
+*/
+
+@function rem($pixels, $context: $base-font-size) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}

@@ -1,0 +1,75 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-size-adjust: none;
+}
+
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  color: $color-black;
+  line-height: 1.4;
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-size: rem(16);
+  font-weight: 400;
+  @include font-fix;
+}
+
+p {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a {
+  color: $color-black;
+  transition: color .3s ease;
+  &:hover {
+    color: transparentize($color-black, 0.2);
+  }
+}
+
+.container {
+  width: 100%;
+  .wrapper {
+    max-width: rem(1200);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 rem(30);
+  }
+}
+
+@media only screen and (max-width: $tablet) {
+  body {
+    font-size: rem(16);
+  }
+
+  .container {
+    .wrapper {
+      max-width: rem(768);
+      padding: 0 rem(20);
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  body {
+    font-size: rem(14);
+  }
+
+  .container {
+    .wrapper {
+      max-width: rem(320);
+      padding: 0 rem(10);
+    }
+  }
+}

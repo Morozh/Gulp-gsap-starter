@@ -1,0 +1,3 @@
+mixin svg-use(id, classname, width="100%", height="100%", attr)
+	svg(xmlns="http://www.w3.org/2000/svg" class=classname width=width height=height)&attributes(attributes)!= attr
+		use(xlink:href='/img/svg-lib.svg#'+id)

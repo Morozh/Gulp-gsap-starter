@@ -1,0 +1,13 @@
+// Библиотеки
+@import 'libs';
+
+// Базовые расширения
+@import 'assets/vars';
+@import 'assets/mixins';
+@import 'assets/fonts';
+@import 'assets/base';
+
+// Компоненты
+@import '../components/header/header';
+
+// Контент страницы
